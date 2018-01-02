@@ -61,3 +61,5 @@ add_executable(tocgen
 
     ./libs/CoreString/CoreString/src/CoreString.cpp
 )
+
+INSTALL(TARGETS tocgen RUNTIME DESTINATION /usr/local/bin)
