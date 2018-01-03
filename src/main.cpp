@@ -65,7 +65,7 @@ Notes:
 
 )";
 
-    printf(CoreString::Format(str, PROGRAM_NAME).c_str());
+    printf("%s", CoreString::Format(str, PROGRAM_NAME).c_str());
     exit(errorCode);
 }
 
@@ -77,7 +77,7 @@ This is a free software (GPLv3) - Share/Hack it
 Check http://www.amazingcow.com for more :)
 )";
 
-    printf(CoreString::Format(
+    printf("%s", CoreString::Format(
         str,
         PROGRAM_NAME,
         COW_TOCGEN_VERSION,
