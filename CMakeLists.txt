@@ -30,7 +30,7 @@ add_executable(tocgen
     ./libs/CoreFS/CoreFS/CoreFS.h
     ./libs/CoreFS/CoreFS/include/CoreFS.h
     ./libs/CoreFS/CoreFS/include/CoreFS_Utils.h
-    ./libs/CoreFS/CoreFS/include/private/Macros.h
+    libs/CoreFS/CoreFS/src/Macros.h
     ./libs/CoreLog/CoreLog/CoreLog.h
     ./libs/CoreLog/CoreLog/include/CoreLog_Utils.h
     ./libs/CoreLog/CoreLog/include/Logger.h
@@ -50,16 +50,15 @@ add_executable(tocgen
     ./libs/CoreAssert/CoreAssert/src/private/PrivateHelpers.cpp
     ./libs/CoreFile/CoreFile/src/CoreFile.cpp
     ./libs/CoreFS/CoreFS/src/CoreFS.cpp
-    ./libs/CoreFS/CoreFS/src/CoreFS_GNU_Linux.cpp
     ./libs/CoreFS/CoreFS/src/CoreFS_Win32.cpp
 
     ./libs/CoreLog/CoreLog/src/Log.cpp
     ./libs/CoreLog/CoreLog/src/Logger.cpp
-    ./libs/CoreLog/CoreLog/src/private/os_functions_gnu_linux.cpp
+    libs/CoreLog/CoreLog/src/private/os_functions.cpp
     ./libs/libtermcolor/termcolor/src/Config.cpp
     ./libs/libtermcolor/termcolor/src/Functions.cpp
 
     ./libs/CoreString/CoreString/src/CoreString.cpp
-)
+    libs/CoreFS/CoreFS/src/CoreFS_Unix.cpp)
 
 INSTALL(TARGETS tocgen RUNTIME DESTINATION /usr/local/bin)
