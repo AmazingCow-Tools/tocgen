@@ -18,10 +18,15 @@
 
 ## Description:
 
+A stupidly simple _HTML Table of Contents_ generator.
+
 
 ### Motivation:
 
+We want _ToC_ on our pages, that's it ;D
+
 <br>
+
 As usual, you are **very welcomed** to **share** and **hack** it.
 
 
@@ -30,6 +35,21 @@ As usual, you are **very welcomed** to **share** and **hack** it.
 <!-- ####################################################################### -->
 
 ## Usage:
+```
+  tocgen [-h] [-v] [-V] <filename>
+
+Options:
+  *-h --help    : Show this screen.
+  *-v --version : Show app version and copyright.
+
+   -V --verbose : Turn debug logs on.
+
+   <filename> : The file's name that will be parsed.
+
+Notes:
+  Options marked with * are exclusive, i.e. the gosh will run that
+  and exit after the operation.
+```
 
 
 <!-- ####################################################################### -->
@@ -38,6 +58,9 @@ As usual, you are **very welcomed** to **share** and **hack** it.
 
 ## Examples:
 
+```bash
+tocgen /path/to/the/html/page.html # Will output to the console.
+```
 
 
 <!-- ####################################################################### -->
@@ -46,10 +69,14 @@ As usual, you are **very welcomed** to **share** and **hack** it.
 
 ## Documentation:
 
+<!-- 
+    There's no docs yet...
+
 We strive to make our source code fully documented.   
 While there are a myriad of comments, one might find useful take a look at:
 
-* [Doxygen Docs](http://www.amazingcow.com/docs/tocgen/).
+* [Doxygen Docs](http://www.amazingcow.com/docs/tocgen/). 
+-->
 
 Anyway if you didn't understand something let us know sending a mail to  
 [help_floss@amazingcow.com]() with the subject filled with the
@@ -62,8 +89,18 @@ name of this repo.
 
 ## Dependencies:
 
-There is no dependency for ```tocgen```.
+* [CoreAssert](https://github.com/AmazingCow-Libs/CoreAssert)
+* [CoreFile](https://github.com/AmazingCow-Libs/CoreFile)
+* [CoreFS](https://github.com/AmazingCow-Libs/CoreFS)
+* [CoreLog](https://github.com/AmazingCow-Libs/CoreLog)
+* [CoreString](https://github.com/AmazingCow-Libs/CoreString)
+* [libtermcolor](https://github.com/AmazingCow-Libs/libtermcolor)
 
+All dependecies are ```git submodules``` so issue:
+```bash
+git submodule update --init --recursive
+```
+and you're good to go!
 
 
 <!-- ####################################################################### -->
