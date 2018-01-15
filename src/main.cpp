@@ -32,7 +32,7 @@
 //----------------------------------------------------------------------------//
 #define COW_TOCGEN_VERSION_MAJOR    "0"
 #define COW_TOCGEN_VERSION_MINOR    "1"
-#define COW_TOCGEN_VERSION_REVISION "0"
+#define COW_TOCGEN_VERSION_REVISION "1"
 
 #define COW_TOCGEN_VERSION           \
         COW_TOCGEN_VERSION_MAJOR "." \
@@ -311,3 +311,4 @@ int main()
 }
 
 #endif
+
