@@ -147,6 +147,21 @@ void print_tree_html(const Node &node, int level = 0) noexcept
 }
 
 
+// This will remove all tags on the contents.
+//
+// Input:
+//   <a href="https://github.com/AmazingCow-Game-Framework/videos">olcConsoleGameEngine</a>
+// Output:
+//    olcConsoleGameEngine
+std::string remove_all_tags(const std::string &contents) noexcept
+{
+    auto tag_re         = std::regex ("<[^>]*>");
+    auto clean_contents = std::regex_replace(contents, tag_re, "");
+
+    return clean_contents;
+}
+
+
 //----------------------------------------------------------------------------//
 // Entry Point                                                                //
 //----------------------------------------------------------------------------//
