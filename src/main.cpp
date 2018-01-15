@@ -42,6 +42,8 @@
 #define PROGRAM_NAME    "tocgen"
 #define COPYRIGHT_YEARS "2018"
 
+#define TOCGEN_TEST 0
+
 
 //----------------------------------------------------------------------------//
 // Help / Version                                                             //
@@ -98,6 +100,7 @@ std::string comment_string() noexcept
     return CoreString::Format(str, PROGRAM_NAME, COW_TOCGEN_VERSION);
 }
 
+
 //----------------------------------------------------------------------------//
 // Data Structures                                                            //
 //----------------------------------------------------------------------------//
@@ -120,6 +123,10 @@ struct Node
     }
 };
 
+
+//----------------------------------------------------------------------------//
+// Functions                                                                  //
+//----------------------------------------------------------------------------//
 void print_tree_html(const Node &node, int level = 0) noexcept
 {
     auto spaces = std::string(level * 2, ' ');
@@ -165,6 +172,8 @@ std::string remove_all_tags(const std::string &contents) noexcept
 //----------------------------------------------------------------------------//
 // Entry Point                                                                //
 //----------------------------------------------------------------------------//
+#if (!TOCGEN_TEST)
+
 int main(int argc, char *argv[])
 {
     if(argc < 2)
@@ -245,7 +254,9 @@ int main(int argc, char *argv[])
 
         // Get the line's info.
         auto value    = int(clean_line[2]) - int('1') + 1;
-        auto contents = CoreString::Trim(clean_line.substr(4, clean_line.size() -9));
+        auto contents = remove_all_tags(
+            CoreString::Trim(clean_line.substr(4, clean_line.size() -9))
+        );
 
         // Log... ;D
         CoreLog::Debug("(%d) %s", lineno, clean_line);
@@ -288,3 +299,15 @@ int main(int argc, char *argv[])
     print_tree_html(head);
     return 0;
 }
+
+#else
+
+int main()
+{
+    auto dirty_content = R"(<a href="https://github.com/AmazingCow-Game-Framework/videos">olcConsoleGameEngine</a>)";
+    auto clean_content = remove_all_tags(dirty_content);
+
+    CoreLog::I("Clean: %s", clean_content);
+}
+
+#endif
