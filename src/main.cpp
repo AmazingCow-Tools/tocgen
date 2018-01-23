@@ -32,7 +32,7 @@
 //----------------------------------------------------------------------------//
 #define COW_TOCGEN_VERSION_MAJOR    "0"
 #define COW_TOCGEN_VERSION_MINOR    "1"
-#define COW_TOCGEN_VERSION_REVISION "1"
+#define COW_TOCGEN_VERSION_REVISION "2"
 
 #define COW_TOCGEN_VERSION           \
         COW_TOCGEN_VERSION_MAJOR "." \
@@ -62,12 +62,12 @@ Options:
    <filename> : The file's name that will be parsed.
 
 Notes:
-  Options marked with * are exclusive, i.e. the gosh will run that
+  Options marked with * are exclusive, i.e. the %s will run that
   and exit after the operation.
 
 )";
 
-    printf("%s", CoreString::Format(str, PROGRAM_NAME).c_str());
+    printf("%s", CoreString::Format(str, PROGRAM_NAME, PROGRAM_NAME).c_str());
     exit(errorCode);
 }
 
