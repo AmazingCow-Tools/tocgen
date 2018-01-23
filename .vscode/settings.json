@@ -1,0 +1,9 @@
+{
+    "C_Cpp.intelliSenseEngineFallback": "Disabled",
+    "files.associations": {
+        "sstream": "cpp",
+        "xstring": "cpp",
+        "regex": "cpp",
+        "cstdarg": "cpp"
+    }
+}
