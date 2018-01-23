@@ -16,3 +16,6 @@
 [submodule "libs/libtermcolor"]
 	path = libs/libtermcolor
 	url = https://github.com/AmazingCow-Libs/libtermcolor
+[submodule "libs/acow_cpp_goodies"]
+	path = libs/acow_cpp_goodies
+	url = https://github.com/AmazingCow-Libs/acow_cpp_goodies
