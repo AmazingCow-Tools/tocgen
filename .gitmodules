@@ -19,3 +19,6 @@
 [submodule "libs/acow_cpp_goodies"]
 	path = libs/acow_cpp_goodies
 	url = https://github.com/AmazingCow-Libs/acow_cpp_goodies
+[submodule "libs/acow_nt_posix"]
+	path = libs/acow_nt_posix
+	url = https://github.com/AmazingCow-Libs/acow_nt_posix
